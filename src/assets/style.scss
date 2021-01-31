@@ -1,0 +1,98 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-size: 16px;
+}
+
+#app {
+    font-family: sans-serif;
+    min-height: 100vh;
+    background: rgb(46, 113, 168) url('./bg.jpg') center top fixed;
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    h3 {
+        font-size: 2rem;
+    }
+    h3, h5, label, span, p {
+        text-shadow: rgba(60, 44, 71, 0.4) 0 1px 1px;
+    }
+    button, input {
+        border: 0;
+        outline: 0;
+        border-radius: .25rem;
+        padding: 1rem;
+        font-family: inherit;
+        background: #654ea3;  /* fallback for old browsers */
+        background: -webkit-linear-gradient(to bottom, #a98ddd, #654ea3);  /* Chrome 10-25, Safari 5.1-6 */
+        background: linear-gradient(to bottom, #a98ddd, #654ea3); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+        color: #ffffff;
+        transition: .2s ease;
+        min-width: 300px;
+    }
+    button {
+        cursor: pointer;
+        &:hover {
+            box-shadow: rgba(60, 44, 71, 0.4) 0 2px 5px;
+        }
+    }
+    input {
+        background: rgba(255,255,255,.7);
+        color: #3c3942;
+        &:focus {
+            box-shadow: rgba(60, 44, 71, 0.4) 0 2px 5px;
+        }
+    }
+    .login, .chat {
+        padding: 2rem;
+        background-color: rgba(255,255,255,.3);
+        color: #ffffff;
+        display: flex;
+        flex-direction: column;
+        backdrop-filter: blur(20px);
+        border-radius: .5rem;
+        box-shadow: rgba(60, 44, 71, 0.3) 0 5px 15px, inset rgba(255,255,255,.6) 0 0 3px;
+        &>* {
+            margin: .5rem 0;
+        }
+    }
+    .chat {
+        .chat-messages {
+            min-width: 500px;
+            height: 50vh;
+            padding: 1rem;
+            overflow: auto;
+            background-color: rgba(60, 44, 71, 0.1);
+            border-radius: .5rem;
+            margin: 1rem 0;
+            .chat-message {
+                background-color: rgba(60, 44, 71, 0.1);
+                border-radius: .25rem;
+                margin: 1rem 0;
+                padding: 1rem;
+                &__username {
+                    color: rgb(60, 44, 71);
+                    text-shadow: none;
+                    font-weight: bold;
+                    i {
+                        font-weight: normal;
+                        font-size: .8em;
+                        font-style: normal;
+                    }
+                }
+                &__text {
+                    margin-top: .5rem;
+                }
+            }
+        }
+        .chat-form {
+            display: flex;
+            flex-direction: column;
+            input {
+                margin-bottom: 1rem;
+            }
+        }
+    }
+}
